@@ -239,18 +239,6 @@ print(selected_features_anova)
 
 <img width="623" height="72" alt="image" src="https://github.com/user-attachments/assets/3b39c878-02dc-4352-8c92-cbbb0f4e8ce6" />
 
-```
-import pandas as pd 
-from sklearn.feature_selection import RFE 
-from sklearn.linear_model import LogisticRegression 
-df=pd.read_csv("income(1) (1).csv")
-categorical_columns = [ 'JobType', 'EdType', 'maritalstatus', 'occupation', 'relationship', 'race', 'gender', 'nativecountry' ]
-df[categorical_columns] = df[categorical_columns].astype('category')
-df[categorical_columns] = df[categorical_columns].apply(lambda x: x.cat.codes)
-df[categorical_columns]
-```
-
-<img width="683" height="372" alt="image" src="https://github.com/user-attachments/assets/dd6e1205-89dd-4673-b94c-a19f179d35e2" />
 
 ```
 X = df.drop(columns=['SalStat']) 
